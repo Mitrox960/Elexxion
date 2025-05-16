@@ -94,7 +94,6 @@ df_2017 = prepare_df(2017, 'chom2017', 1.0, 1.0, securite_2017, emploiv_2017)
 df_2018 = prepare_df(2018, 'chom2018', 1.02, 0.97, securite_2018, emploiv_2018)
 df_2022 = prepare_df(2022, 'chom2022', 1.05, 0.95, securite_2022, emploiv_2022)
 
-
 # Concaténation des années
 df = pd.concat([df_2017, df_2018, df_2022], ignore_index=True)
 
@@ -145,7 +144,9 @@ model = RandomForestRegressor(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
 y_pred = model.predict(X_test)
-print(f"R² sur test : {r2_score(y_test, y_pred):.3f}")
+r2 = r2_score(y_test, y_pred)
+
+print(f"R² sur jeu de test : {r2:.3f}")
 
 # Importance variables
 importances = model.feature_importances_
