@@ -35,6 +35,7 @@ Le projet repose sur 3 grands blocs structurés :
 
 Pour entraîner et tester le modèle supervisé de régression qui prédit le score électoral du parti du centre (RandomForestRegressor) :
    python prediction_ai.py
+
 Ce script :
    - Charge et fusionne les données des années 2017, 2018 et 2022.
    - Entraîne un modèle supervisé.
