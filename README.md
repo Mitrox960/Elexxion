@@ -30,6 +30,7 @@ Le projet repose sur 3 grands blocs structurés :
    ```bash
    pip install pandas openpyxl
 3. Exécutez tous les scripts de traitement en allant a la racine du projet : python run_all_etl.py
+4. Pour lire la base de donnée créée et mise à jour grâce à la commande précédente : python inspect_bdd.py
 
 ## Lancement du modèle prédictif principal
 
